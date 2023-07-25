@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const loginRes = await axios.post(
-        `${process.env.React_APP_base_url}/api/users/login`,
+        `${process.env.REACT_APP_base_url}/api/users/login`,
         {
           email: form.email,
           password: form.password,

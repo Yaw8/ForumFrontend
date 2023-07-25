@@ -12,7 +12,7 @@ const Home = () => {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        `${process.env.React_APP_base_url}/api/questions`
+        `${process.env.REACT_APP_base_url}/api/questions`
         
       );
       setAllQuestions(questionRes.data.data);

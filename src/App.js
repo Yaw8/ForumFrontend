@@ -20,7 +20,7 @@ function App() {
     const token = localStorage.getItem('auth-token');
     if (token) {
       try {
-        const response = await axios.get(`${process.env.React_APP_base_url}/api/users`, {
+        const response = await axios.get(`${process.env.REACT_APP_base_url}/api/users`, {
           headers: { 'x-auth-token': token }
         });
 

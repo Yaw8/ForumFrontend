@@ -11,7 +11,7 @@ const SingleQuestion = () => {
   const questionByPostId = async () => {
     try {
       const question = await axios.get(
-        `${process.env.React_APP_base_url}/api/questions/${params.id}`
+        `${process.env.REACT_APP_base_url}/api/questions/${params.id}`
       );
     
       setQuestion(question.data.data);
@@ -22,7 +22,7 @@ const SingleQuestion = () => {
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-        `${process.env.React_APP_base_url}/api/answers/${question?.question_id}`
+        `${process.env.REACT_APP_base_url}/api/answers/${question?.question_id}`
       );
       
       setAnswers(answersRes.data.data);
